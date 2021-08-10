@@ -41,10 +41,14 @@ export default function Programmers() {
     //   console.log("dev id:", dev.id);
     //   featured === dev.id ? dev.name : "";
     // });
-
-    for (let i = 0; i < programmers.length; i++) {
-      return programmers[i].id === featured ? programmers[i].name : "huh";
-    }
+    let programmersName;
+    programmers.forEach(dev => {
+      featured === dev.id ? (programmersName = dev.name) : "huh?";
+    });
+    return programmersName;
+    // for (let i = 0; i < programmers.length; i++) {
+    //   return programmers[i].id === featured ? programmers[i].name : "huh";
+    // }
   };
 
   const style = {
